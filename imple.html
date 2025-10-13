@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Memory Manager - Visualization</title>
+  <link rel="stylesheet" href="hell.css" />
+</head>
+<body>
+  <h1>Virtual Memory Manager - Page Replacement</h1>
+
+  <div class="input-box">
+    <label>Page Reference String:</label>
+    <input type="text" id="pages" placeholder="e.g. 7 0 1 2 0 3 0 4 2 3" /><br>
+    <label>Number of Frames:</label>
+    <input type="number" id="frames" min="1" value="3" /><br>
+    <label>Algorithm:</label>
+    <select id="algo">
+      <option value="FIFO">FIFO</option>
+    
+    </select>
+    <button onclick="startSimulation()">Run</button>
+  </div>
+
+  <div class="frames" id="output"></div>
+
+  <div class="result-box" id="result"></div>
+
+  <script src="index.js">  </script>
+</body>
+</html>
