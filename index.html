@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virtual Memory Manager - Visualization</title>
+  <link rel="stylesheet" href="hell.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Virtual Memory Manager — Page Replacement</h1>
+
+    <div class="input-box">
+      <label>Page Reference String (space separated)</label>
+      <input id="pages" type="text" placeholder="e.g. 7 0 1 2 0 3 0 4 2 3"  />
+
+      <label>Number of Frames</label>
+      <input id="frames" type="number" min="1" value="3" />
+
+      <label>Algorithm</label>
+      <select id="algo">
+        <option value="FIFO">FIFO</option>
+        <option value="LRU">LRU</option>
+        <option value="OPT">Optimal</option>
+      </select>
+
+      <div class="controls">
+        <button id="runBtn" onclick="startSimulation()">Run</button>
+        <button id="stepBtn" onclick="startStepByStep()">Step</button>
+        <button id="resetBtn" onclick="resetSimulation()">Reset</button>
+      </div>
+      <div class="speed">
+        <label>Speed</label>
+        <input id="speed" type="range" min="100" max="1500" step="100" value="600" />
+      </div>
+    </div>
+
+    <div id="visual">
+      <div id="output" class="frames"></div>
+      <div id="result" class="result-box"></div>
+    </div>
+
+    <footer>
+      <small>Algorithms: FIFO, LRU, Optimal — visualization with step-by-step mode.</small>
+    </footer>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
