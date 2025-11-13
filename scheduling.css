@@ -1,0 +1,157 @@
+
+body {
+  background-color: #0b132b;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #00b4d8;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+select, input, button, textarea {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #1c2541;
+  background-color: #1c2541;
+  color: white;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007bff;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  width: 280px;
+  height: 100px;
+  resize: none;
+}
+
+.chart-container {
+  margin-top: 40px;
+}
+
+#ganttWrapper {
+  margin: 0 auto;
+  width: 85%;
+  background-color: #1c2541;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+}
+
+#ganttChart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.gantt-block {
+  border-radius: 8px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 2px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.gantt-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#timeScale {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 8px;
+  position: relative;
+}
+
+.time-label {
+  width: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.time-label::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  height: 10px;
+  width: 2px;
+  background: #00b4d8;
+  transform: translateX(-50%);
+}
+
+.gantt-block {
+  position: relative;
+  height: 60px;
+  margin: 5px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gantt-block span {
+  position: absolute;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.start-time {
+  left: 6px;
+  bottom: 5px;
+}
+
+.end-time {
+  right: 6px;
+  bottom: 5px;
+}
+
+.process-id {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 14px;
+}

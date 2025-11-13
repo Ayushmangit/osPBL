@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Virtual Memory Manager - Visualization</title>
   <link rel="stylesheet" href="hell.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>Virtual Memory Manager — Page Replacement</h1>
+    <div class="nav-links">
+      <a href="scheduling.html" class="nav-btn">Go to CPU Scheduling Visualizer →</a>
+    </div>
+
 
     <div class="input-box">
       <label>Page Reference String (space separated)</label>
-      <input id="pages" type="text" placeholder="e.g. 7 0 1 2 0 3 0 4 2 3"  />
+      <input id="pages" type="text" placeholder="e.g. 7 0 1 2 0 3 0 4 2 3" />
 
       <label>Number of Frames</label>
       <input id="frames" type="number" min="1" value="3" />
@@ -47,4 +53,5 @@
 
   <script src="index.js"></script>
 </body>
+
 </html>

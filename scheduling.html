@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CPU Scheduling Visualizer</title>
+  <link rel="stylesheet" href="scheduling.css">
+</head>
+
+<body>
+  <h1>CPU Scheduling Visualizer</h1>
+
+  <div class="controls">
+    <label for="algorithm">Algorithm:</label>
+    <select id="algorithm">
+      <option value="FCFS">FCFS</option>
+      <option value="SJF">SJF</option>
+      <option value="PRIORITY">Priority Scheduling</option>
+      <option value="RR">Round Robin</option>
+    </select>
+
+    <label for="quantum">Time Quantum:</label>
+    <input type="number" id="quantum" placeholder="Only for RR" value="2" min="1">
+
+    <label for="speed">Speed (ms):</label>
+    <input type="number" id="speed" value="200" min="50">
+
+    <button id="run">Run</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <div class="input-area">
+    <label for="processInput">Enter Processes (p, arrival, burst):</label>
+    <textarea id="processInput" placeholder="p1 0 5&#10;p2 2 3&#10;p3 4 1"></textarea>
+  </div>
+
+  <div class="chart-container">
+    <h2>Gantt Chart</h2>
+    <div id="ganttWrapper">
+      <div id="ganttChart"></div>
+      <div id="timeScale"></div>
+    </div>
+  </div>
+
+  <script src="scheduling.js"></script>
+</body>
+
+</html>
